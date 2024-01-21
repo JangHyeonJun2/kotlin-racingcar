@@ -14,4 +14,8 @@ class Car(
             position += 1
         }
     }
+
+    fun getPosition(): Int {
+        return position
+    }
 }
