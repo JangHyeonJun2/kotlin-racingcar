@@ -2,7 +2,7 @@ package racingcar.domain
 
 class Car(
     val name:String,
-    var position: Int
+    var position: Int = 0
 ) {
     init {
         require(name.length in 1..5) { "이름의 길이는 1 이상 5 이하입니다." }
@@ -17,5 +17,11 @@ class Car(
 
     fun getPosition(): Int {
         return position
+    }
+
+    companion object {
+        fun of(name: String): Car {
+            return Car(name.trim())
+        }
     }
 }

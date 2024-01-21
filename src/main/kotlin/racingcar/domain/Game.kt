@@ -15,11 +15,17 @@ class Game(
         count -= 1
     }
 
-    private fun isEnd(): Boolean {
+    fun isEnd(): Boolean {
         return count <= 0
     }
 
     fun getWinners(): List<Car> {
         return cars.getWinners()
+    }
+
+    companion object {
+        fun initGame(carNames: List<String>, trialCount: Int): Game {
+            return Game(Cars.of(carNames), trialCount)
+        }
     }
 }

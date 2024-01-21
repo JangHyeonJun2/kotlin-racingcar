@@ -13,4 +13,10 @@ class Cars(
         val fastestPosition: Int = cars.maxOf { car -> car.getPosition() }
         return cars.filter { car -> car.getPosition() == fastestPosition }
     }
+
+    companion object {
+        fun of(carNames: List<String>): Cars {
+            return Cars(carNames.map { Car.of( it) })
+        }
+    }
 }
