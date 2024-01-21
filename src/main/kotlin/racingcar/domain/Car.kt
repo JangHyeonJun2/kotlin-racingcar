@@ -15,9 +15,9 @@ class Car(
         }
     }
 
-    fun getPosition(): Int {
-        return position
-    }
+//    fun getPosition(): Int {
+//        return position
+//    }
 
     companion object {
         fun of(name: String): Car {

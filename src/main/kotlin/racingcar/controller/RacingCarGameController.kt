@@ -22,5 +22,5 @@ class RacingCarGameController (
         outputView.printWinners(ofCarDtos(racingGame.getWinners()))
     }
 
-    private fun ofCarDtos(cars: List<Car>) = cars.map { CarDto( it.name, it.getPosition()) }
+    private fun ofCarDtos(cars: List<Car>) = cars.map { CarDto( it.name, it.position) }
 }

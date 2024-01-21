@@ -10,8 +10,8 @@ class Cars(
     }
 
     fun getWinners(): List<Car> {
-        val fastestPosition: Int = cars.maxOf { car -> car.getPosition() }
-        return cars.filter { car -> car.getPosition() == fastestPosition }
+        val fastestPosition: Int = cars.maxOf { car -> car.position }
+        return cars.filter { car -> car.position == fastestPosition }
     }
 
     companion object {
